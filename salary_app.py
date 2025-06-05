@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 
 def calculate_net_salary(base_salary, allowances, bonuses, tax_rate, deductions):
     gross_salary = base_salary + allowances + bonuses
@@ -20,3 +21,16 @@ if st.button("Calculate"):
     st.success(f"Gross Salary: ${gross:,.2f}")
     st.warning(f"Tax Deducted: ${tax:,.2f}")
     st.info(f"Net Salary: ${net:,.2f}")
+    # Data for the pie chart
+    labels = ['Base Salary', 'Allowances', 'Bonuses', 'Tax', 'Other Deductions', 'Net Salary']
+    sizes = [base_salary, allowances, bonuses, tax, deductions, net]
+
+    # Create the pie chart
+    fig, ax = plt.subplots()
+    ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+    ax.axis('equal')  # Equal aspect ratio ensures pie is drawn as a circle
+
+    # Display the chart in Streamlit
+    st.pyplot(fig)
+
+    
