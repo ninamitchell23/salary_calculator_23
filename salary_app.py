@@ -25,12 +25,22 @@ if st.button("Calculate"):
     labels = ['Base Salary', 'Allowances', 'Bonuses', 'Tax', 'Other Deductions', 'Net Salary']
     sizes = [base_salary, allowances, bonuses, tax, deductions, net]
 
-    # Create the pie chart
-    fig, ax = plt.subplots()
-    ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
-    ax.axis('equal')  # Equal aspect ratio ensures pie is drawn as a circle
+    fig, ax = plt.subplots(figsize=(8, 8))
 
-    # Display the chart in Streamlit
+    # Create pie chart WITHOUT labels or autopct
+    wedges, texts = ax.pie(
+        sizes, 
+        startangle=90,
+        wedgeprops=dict(width=0.4)  # Optional: donut style
+    )
+
+    # Format percentages for legend
+    percentages = [f"{(s / sum(sizes)) * 100:.2f}%" for s in sizes]
+    custom_labels = [f"{label}: {pct}" for label, pct in zip(labels, percentages)]
+
+    # Add a clean legend instead of overlapping labels
+    ax.legend(wedges, custom_labels, title="Salary Breakdown", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
+
+    ax.axis('equal')  # Make pie chart round
     st.pyplot(fig)
-
     
