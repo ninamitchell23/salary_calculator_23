@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: salary-backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    container_name: salary-frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL=http://backend:8000
