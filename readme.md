@@ -123,8 +123,8 @@ Pandas is a powerful Python library used in this project for data manipulation a
 [MIT License](LICENSE)
 
 ## Contact
-- **Author**: [Abonyo Mitchell Nina]
-- **Email**: [mtchllnina@gmail.com]
+- **Author**: Abonyo Mitchell Nina
+- **Email**: mtchllnina@gmail.com
 
 
 ## Troubleshooting
