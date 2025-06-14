@@ -123,9 +123,9 @@ Pandas is a powerful Python library used in this project for data manipulation a
 [MIT License](LICENSE)
 
 ## Contact
-- **Author**: [Your Name or Username]
-- **Email**: [your-email@example.com]
-- **GitHub**: [github.com/your-username]
+- **Author**: [Abonyo Mitchell Nina]
+- **Email**: [mtchllnina@gmail.com]
+
 
 ## Troubleshooting
 - **Page Not Found**: Ensure `pages/` is correctly structured.
