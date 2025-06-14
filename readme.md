@@ -15,26 +15,6 @@ A Streamlit-based web application designed to calculate net salary, assess loan 
   - Backend: FastAPI (for API calculations)
   - Dependencies: `pandas`, `numpy`, `matplotlib`, `requests`
 
-
-## Project Structure
-# Salary Calculator
-
-A Streamlit-based web application designed to calculate net salary, assess loan eligibility, and track loan repayments. This project, named `SALARY_CALCULATOR_23`, provides a user-friendly interface for financial planning, featuring a multi-page layout with customer dashboard, loan calculator, and repayment tracking.
-
-## Overview
-
-- **Purpose**: Helps users calculate their net salary based on base salary, allowances, bonuses, and deductions, and determine loan eligibility with EMI (Equated Monthly Installment) calculations and repayment tracking.
-- **Features**:
-  - Salary calculation with customizable tax rates.
-  - Loan eligibility check and EMI comparison.
-  - Remaining loan balance visualization over time.
-  - Payment recording and tracking in a CSV file.
-- **Tech Stack**:
-  - Frontend: Streamlit (v1.45.0)
-  - Backend: FastAPI (for API calculations)
-  - Dependencies: `pandas`, `numpy`, `matplotlib`, `requests`
-
-
 ## Project Structure
 ![Project Structure Diagram](projectstructure_diagram.png)
 
