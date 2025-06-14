@@ -15,37 +15,32 @@ A Streamlit-based web application designed to calculate net salary, assess loan 
   - Backend: FastAPI (for API calculations)
   - Dependencies: `pandas`, `numpy`, `matplotlib`, `requests`
 
+
 ## Project Structure
 
-```
 SALARY_CALCULATOR_23/
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ Dockerfile
-â”‚   â”œâ”€â”€ main.py
-â”‚   â”œâ”€â”€ models.py
-â”‚   â”œâ”€â”€ requirements.txt
-â”‚   â”œâ”€â”€ salary_loan_utility.py
-â”‚   â””â”€â”€ salary_logic.py
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ pages/
-â”‚   â”‚   â”œâ”€â”€ admin.py
-â”‚   â”‚   â”œâ”€â”€ customer.py
-â”‚   â”‚   â”œâ”€â”€ repayment.py
-â”‚   â”‚   â”œâ”€â”€ Dockerfile
-â”‚   â”‚   â”œâ”€â”€ payments.csv
-â”‚   â”‚   â””â”€â”€ requirements.txt
-â”‚   â”œâ”€â”€ salary_app.py
-â”‚   â”œâ”€â”€ nina/ (optional subdirectory)
-â”‚   â”œâ”€â”€ .gitignore
-â”‚   â””â”€â”€ docker-com... (docker-compose.yml)
-â”œâ”€â”€ docker-compose.yml
-```
-
-- `salary_app.py`: Main Streamlit app entry point.
-- `pages/`: Contains multi-page scripts (`customer.py`, `repayment.py`, etc.).
-- `backend/`: FastAPI backend for salary and loan calculations.
-- `docker-compose.yml`: Configures Docker services for frontend and backend.
-
+|-- backend/                    # FastAPI backend logic
+|   |-- Dockerfile              # Docker image definition for the backend
+|   |-- main.py                 # Entry point for FastAPI app
+|   |-- models.py               # Pydantic models for validation
+|   |-- requirements.txt        # Backend dependencies
+|   |-- salary_logic.py         # Salary calculation logic
+|   |-- salary_loan_utility.py  # Loan calculation utilities
+|
+|-- frontend/                   # Streamlit frontend
+|   |-- pages/                  # Multi-page views
+|   |   |-- admin.py            # Admin dashboard (optional)
+|   |   |-- customer.py         # Customer salary + loan form
+|   |   |-- repayment.py        # Loan repayment tracking
+|   |   |-- requirements.txt    # Frontend dependencies
+|   |
+|   |-- salary_app.py           # Main Streamlit app
+|   |-- payments.csv            # Loan payment storage
+|   |-- Dockerfile              # Docker config for frontend
+|   |-- architecture_diagram.png  # Architecture image for README
+|
+|-- docker-compose.yml          # Manages frontend + backend containers
+|-- .gitignore                  # Files ignored in version control
 ## Architecture Diagram
 
 ![Architecture Diagram](architecture_diagram.png)
