@@ -20,7 +20,7 @@ A Streamlit-based web application designed to calculate net salary, assess loan 
 
 ## Architecture Diagram
 
-![Architecture Diagram](architecture_diagram.png)
+![Architecture Diagram](architecture_diagram.jpg)
 
 **Description**: The architecture consists of a frontend built with Streamlit, hosted in a Docker container, and a backend powered by FastAPI, also containerized. The frontend communicates with the backend via HTTP requests (e.g., `http://backend:8000/calculate-salary`) to perform salary and loan calculations. Data persistence is handled through CSV files (`payments.csv` and `salary_loan_data.csv`) mounted as volumes. The multi-page navigation is managed by Streamlitâ€™s built-in `pages/` directory structure.
 
