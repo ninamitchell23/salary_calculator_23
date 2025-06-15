@@ -1,11 +1,13 @@
-version: "3.9"
+#version: "3.9" // not needed
 
 services:
   backend:
     build: ./backend
     container_name: salary-backend
-    ports:
-      - "8000:8000"
+    volumes:
+      - ./backend/salary_loan_data.csv:/app/salary_loan_data.csv
+    #ports:
+      #- "8000:8000" //no need to expose the backend port to the host
 
   frontend:
     build: ./frontend
@@ -16,3 +18,9 @@ services:
       - backend
     environment:
       - BACKEND_URL=http://backend:8000
+    volumes:
+      - ./backend/salary_loan_data.csv:/app/salary_loan_data.csv
+    command: streamlit run salary_app.py --server.port 8501 --server.address 0.0.0.0
+networks:
+  default:
+    driver: bridge
