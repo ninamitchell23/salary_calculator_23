@@ -16,7 +16,7 @@ A Streamlit-based web application designed to calculate net salary, assess loan 
   - Dependencies: `pandas`, `numpy`, `matplotlib`, `requests`
 
 ## Project Structure
-![Project Structure Diagram](projectstructure_diagram.jpg)
+![Project Structure Diagram](project_structure.png)
 
 ## Architecture Diagram
 
